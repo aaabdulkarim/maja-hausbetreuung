@@ -1,0 +1,28 @@
+/* Service Section */
+.service-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-image img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.service-content {
+  line-height: 1.6;
+}
+
+.service-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.service-content li {
+  margin-bottom: 0.5rem;
+}
+
+.service-content strong {
+  color: #2E7D32;
+}

@@ -1,0 +1,18 @@
+---
+const { title, image, imageAlt = "" } = Astro.props;
+import { } from "service.css"
+---
+
+<section class="container service-section">
+  <h2>{title}</h2>
+
+  {image && (
+    <div class="service-image">
+      <img src={image} alt={imageAlt} />
+    </div>
+  )}
+
+  <div class="service-content">
+    <slot />
+  </div>
+</section>
