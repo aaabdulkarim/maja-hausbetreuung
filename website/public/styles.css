@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #333;
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.hero {
+  background: #2E7D32;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.btn {
+  background: white;
+  color: #2E7D32;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.trust ul {
+  list-style: none;
+  padding: 0;
+}
+
+.trust li {
+  margin: 0.5rem 0;
+}
+
+.cta {
+  background: #555;
+  color: white;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #aaa;
+}
+
