@@ -90,7 +90,7 @@ body {
   padding: 2rem;
   border-radius: 8px;
   border: 1px solid #eee;
-  min-height: 60vh; /* wichtig für Scroll-Effekt */
+  min-height: 60vh; 
 }
 
 /* Rechts (Sticky) */

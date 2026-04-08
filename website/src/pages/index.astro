@@ -2,6 +2,65 @@
 import ContentBox from "../components/ContentBox.astro";
 import Layout from "../layouts/Layout.astro";
 
+const contentData = [
+  {
+    dataTitle: "Gartendienst",
+    dataImagePath: "assets/gartendienst.jpg",
+    dataText: `Auch Gartenpflege ist ein wichtiger Bestandteil unserer Dienstleistungen, die wir mit Leidenschaft und viel Erfahrung durchführen. Ein gut gepflegter und betreuter Garten spiegelt einen positiven Gesamteindruck Ihrer Liegenschaft wider. Um auch solch eine Grünanlage aufrecht zu erhalten, ist unser Service diesbezüglich dementsprechend vielfältig.
+
+Wir bieten an:
+
+    Regelmäßiges Rasenmähen,
+    Zurechtschneiden der Hecken und Sträucher
+    Entfernen von Laub (insb. im Herbst) und Mähgut
+    Unkrautjäten
+    Entsorgen von Grobverschmuzungen
+    Kehren von Geh- und Zugangswegen und Garageneinfahrten innerhalb und außerhalb der Wohnhausanlage
+
+ 
+
+Natürlich nehmen wir auch einmalige Aufträge an!
+    `
+  },
+  {
+    dataTitle: "Hausbetreuung",
+    dataImagePath: "assets/hausbetreuung-in-wien.jpg",
+    dataText: `Es scheint klar, jedes Stiegenhaus braucht eine regelmäßige und gründliche Reinigung. Doch der Service der Firma MAJA Hausbetreuung geht sogar über seine Pflichten hinaus, denn wir ersetzen die gesamte Arbeit eines Hausmeisters. Wir als Meisterbetrieb garantieren Ihnen beste Pflege und Betreuung ihrer Wohnanlage, somit hätten Sie, was die gesamte Hausbetreuung anbelangt, eine Sorge weniger.
+
+Unser Dienst besteht, wie schon oben erwähnt, nicht nur aus der Trocken- und Nassreinigung des Stiegenhauses, sondern unter anderem auch aus den folgenden Tätigkeiten: Reinigung aller gemeinnützigen Räume innerhalb einer Wohnanlage, Säuberung der Fenster und Fensterbretter, Feuchtwischen der Postkästen und Handläufe, gründliche Reinigung der Türen und Liftkabinen, Entfernung der Spinnweben, Auswechslung von Glühbirnen etc.
+
+ 
+
+Wohnungsreinigung 
+
+ 
+
+Auch in privaten Wohnungen führen wir mit hoher Qualität sämtliche Reinigungstätigkeiten durch, damit sie Zeit haben mit anderen Dingen des Lebens zu beschäftigen.
+
+Aufgrund unserer hohen Anzahl an Wohnungsaufträgen in Wien und vorallem in Hietzing, weiß die Maja-Hausbetreuung genau, wie man stark anhaftenden Schmutz beseitigt. `
+  },
+  {
+    dataTitle: "Winterdienst",
+    dataImagePath: "assets/winterdienst.jpg",
+    dataText: `Der Winter ist die härteste und leider auch die gefährlichste Jahreszeit und die Zahlen sprechen für sich. Jedes Jahr passieren unzählige Unfälle in dieser Saison, aufgrund von schlecht behandelten Geh-, Zugangswegen und Garageneinfahrten und Wien bleibt davon nicht verschont. Deshalb sind wir hier, um im Winter sämtliche Wege, Zugänge und Einfahrten Ihrer Liegenschaft ordnungsgemäß und zeitlich in der Früh zu behandeln, damit diese von den Einwohnern bedenkenlos verwendet werden können.
+
+Die Maja Hausbertreuung ist für sie den ganzen Winter (vom 1 November bis 15 April) rund um die Uhr in Bereitschaft, damit sie einen sorgenfreien und verletzungsfreien Gehweg haben. Deshalb ist der Winterdienst auch ein wichtiger Bestandteil unserer Dienstleistungen, da es mit großer Verantwort verbunden ist. 
+
+Natürlich nehmen wir auch gerne einmalige Aufträge an!
+ 
+Unsere Zielgruppen sind vor allem Hausverwaltungen, Firmen und Privatpersonen
+ 
+ 
+Unser Winterdienst setzt sich zusammen aus:
+ 
+
+    Schneeräumung
+    Splittstreuung/Auftaumittelstreuung
+    Tauwetterkontrolle
+    Splittkehrung am Saisonende.`
+  },
+
+] 
 
 ---
 
@@ -15,44 +74,30 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <section class="services-scroll">
-  <div class="container services-layout">
+    <div class="container services-layout">
 
-    <!-- LINKE SEITE -->
-    <div class="services-content">
-      <ContentBox 
-        title="Gartendienst"
-        imagePath="assets/gartendienst.jpg"
-        text="aiushdoiuasd">
-      </ContentBox> 
-
-      
-      <ContentBox 
-        title="Hausbetreuung"
-        imagePath="assets/hausbetreuung-in-wien.jpg"
-        text="aiushdoiuasd">
-      </ContentBox> 
-
-      <ContentBox 
-        title="Winterdienst"
-        imagePath="assets/winterdienst.jpg"
-        text="aiushdoiuasd">
-      </ContentBox> 
-
-     
-
-
-    </div>
-
-    <!-- RECHTE SEITE -->
-    <div class="services-visual">
-      <div class="sticky-frame">
-        <img class="img active" id="img1" src="assets/gartendienst.jpg" alt="">
-        <img class="img" id="img2" src="" alt="">
+      <!-- LINKE SEITE -->
+      <div class="services-content">
+        {contentData.map((item) => (
+          <ContentBox 
+          title={item.dataTitle}
+          imagePath={item.dataImagePath}
+          text={item.dataText}>
+        </ContentBox> 
+        ))}
+        
       </div>
-    </div>
 
-  </div>
-</section>
+      <!-- RECHTE SEITE -->
+      <div class="services-visual">
+        <div class="sticky-frame">
+          <img class="img active" id="img1" src="assets/gartendienst.jpg" alt="">
+          <img class="img" id="img2" src="" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <section class="trust">
     <div class="container">
