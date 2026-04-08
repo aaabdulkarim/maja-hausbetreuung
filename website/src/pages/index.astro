@@ -1,5 +1,8 @@
 ---
+import ContentBox from "../components/ContentBox.astro";
 import Layout from "../layouts/Layout.astro";
+
+
 ---
 
 <Layout>
@@ -11,29 +14,37 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <section class="services">
-    <div class="container">
-      <h2>Unsere Leistungen</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Hausbetreuung</h3>
-          <p>Regelmäßige Kontrollen und Pflege Ihrer Immobilie.</p>
-        </div>
-        <div class="card">
-          <h3>Gartenpflege</h3>
-          <p>Rasenmähen, Heckenschnitt und saisonale Pflege.</p>
-        </div>
-        <div class="card">
-          <h3>Winterdienst</h3>
-          <p>Schneeräumung und Streudienst für Ihre Sicherheit.</p>
-        </div>
-        <div class="card">
-          <h3>Reinigung</h3>
-          <p>Innen- und Außenreinigung zuverlässig durchgeführt.</p>
-        </div>
+  <section class="services-scroll">
+  <div class="container services-layout">
+
+    <!-- LINKE SEITE -->
+    <div class="services-content">
+      <div class="service-item" data-image="assets/gartendienst.jpg">
+        <h3>Hausbetreuung</h3>
+        <p>Regelmäßige Kontrollen und Pflege Ihrer Immobilie.</p>
+      </div>
+
+      <div class="service-item" data-image="assets/hausbetreuung-in-wien.jpg">
+        <h3>Gartenpflege</h3>
+        <p>Rasenmähen, Heckenschnitt und saisonale Pflege.</p>
+      </div>
+
+      <div class="service-item" data-image="assets/winterdienst.jpg">
+        <h3>Winterdienst</h3>
+        <p>Schneeräumung und Streudienst für Ihre Sicherheit.</p>
+      </div>
+
+    </div>
+
+    <!-- RECHTE SEITE -->
+    <div class="services-visual">
+      <div class="sticky-frame">
+        <img id="service-image" src="/images/haus.jpg" alt="">
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <section class="trust">
     <div class="container">
@@ -54,4 +65,28 @@ import Layout from "../layouts/Layout.astro";
       <a href="tel:+43123456789" class="btn">Jetzt anrufen</a>
     </div>
   </section>
+
+  <script type="module">
+    const items = document.querySelectorAll(".service-item");
+    const image = document.getElementById("service-image");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const newImage = entry.target.dataset.image;
+            image.src = newImage; 
+
+            items.forEach(i => i.classList.remove("active"));
+            entry.target.classList.add("active");
+          }
+        });
+      },
+      {
+        threshold: 0.5
+      }
+    );
+
+    items.forEach((item) => observer.observe(item));
+  </script>
 </Layout>

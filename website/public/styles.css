@@ -71,3 +71,50 @@ body {
   color: #aaa;
 }
 
+/* Layout */
+.services-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Links */
+.services-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.service-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  min-height: 60vh; /* wichtig für Scroll-Effekt */
+}
+
+/* Rechts (Sticky) */
+.services-visual {
+  position: relative;
+}
+
+.sticky-frame {
+  position: sticky;
+  top: 100px;
+}
+
+.sticky-frame img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+/* Optional: Active Zustand */
+.service-item.active {
+  border-color: #2E7D32;
+}
+
+/* Optional (richtig nice UX) */
+.sticky-frame img {
+  transition: opacity 0.3s ease;
+}
