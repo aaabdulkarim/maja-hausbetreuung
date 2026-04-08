@@ -1,5 +1,5 @@
 ---
-
+import Header from "./Header.astro"
 ---
 <html lang="de">
   <head>
@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hausbetreuung</title>
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/header.css" />
+
     <link rel="stylesheet" href="src/components/service.css" />
     <link rel="stylesheet" href="src/components/hero.css" />
     <link rel="stylesheet" href="src/components/cta.css" />
@@ -19,11 +21,9 @@
 
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <h2>Hausbetreuung Maja</h2>
-      </div>
-    </header>
+    <Header>
+
+    </Header>
 
     <main>
       <slot />

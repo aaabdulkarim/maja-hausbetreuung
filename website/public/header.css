@@ -1,0 +1,84 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Layout */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* Underline Hover Effekt */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #2E7D32;
+
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: #2E7D32;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.nav-cta {
+  padding: 0.4rem 0.9rem;
+  border-radius: 5px;
+  background: #2E7D32;
+  color: white !important;
+}
+
+.nav-cta::after {
+  display: none;
+}
+
+.nav-cta:hover {
+  background: #256628;
+}
