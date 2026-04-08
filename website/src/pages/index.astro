@@ -6,58 +6,49 @@ const contentData = [
   {
     dataTitle: "Gartendienst",
     dataImagePath: "assets/gartendienst.jpg",
-    dataText: `Auch Gartenpflege ist ein wichtiger Bestandteil unserer Dienstleistungen, die wir mit Leidenschaft und viel Erfahrung durchführen. Ein gut gepflegter und betreuter Garten spiegelt einen positiven Gesamteindruck Ihrer Liegenschaft wider. Um auch solch eine Grünanlage aufrecht zu erhalten, ist unser Service diesbezüglich dementsprechend vielfältig.
+    dataText: `Ein gepflegter Garten sorgt für einen positiven Gesamteindruck Ihrer Liegenschaft. Mit Erfahrung und Sorgfalt kümmern wir uns um die regelmäßige Pflege Ihrer Grünanlagen.
 
-Wir bieten an:
+Unsere Leistungen:
 
-    Regelmäßiges Rasenmähen,
-    Zurechtschneiden der Hecken und Sträucher
-    Entfernen von Laub (insb. im Herbst) und Mähgut
-    Unkrautjäten
-    Entsorgen von Grobverschmuzungen
-    Kehren von Geh- und Zugangswegen und Garageneinfahrten innerhalb und außerhalb der Wohnhausanlage
+- Rasenmähen
+- Hecken- und Strauchschnitt
+- Laub- und Mähgutentfernung
+- Unkrautbeseitigung
+- Reinigung von Wegen und Einfahrten
 
- 
-
-Natürlich nehmen wir auch einmalige Aufträge an!
+Auch einmalige Aufträge übernehmen wir gerne.
     `
   },
   {
     dataTitle: "Hausbetreuung",
     dataImagePath: "assets/hausbetreuung-in-wien.jpg",
-    dataText: `Es scheint klar, jedes Stiegenhaus braucht eine regelmäßige und gründliche Reinigung. Doch der Service der Firma MAJA Hausbetreuung geht sogar über seine Pflichten hinaus, denn wir ersetzen die gesamte Arbeit eines Hausmeisters. Wir als Meisterbetrieb garantieren Ihnen beste Pflege und Betreuung ihrer Wohnanlage, somit hätten Sie, was die gesamte Hausbetreuung anbelangt, eine Sorge weniger.
+    dataText: `Wir übernehmen die komplette Betreuung Ihrer Wohnanlage – zuverlässig, gründlich und professionell. Als Meisterbetrieb ersetzen wir die klassische Hausmeisterarbeit und sorgen dafür, dass alles einwandfrei funktioniert.
 
-Unser Dienst besteht, wie schon oben erwähnt, nicht nur aus der Trocken- und Nassreinigung des Stiegenhauses, sondern unter anderem auch aus den folgenden Tätigkeiten: Reinigung aller gemeinnützigen Räume innerhalb einer Wohnanlage, Säuberung der Fenster und Fensterbretter, Feuchtwischen der Postkästen und Handläufe, gründliche Reinigung der Türen und Liftkabinen, Entfernung der Spinnweben, Auswechslung von Glühbirnen etc.
+Unsere Leistungen umfassen unter anderem:
 
- 
+- Stiegenhausreinigung (trocken & nass)
+- Reinigung von Gemeinschaftsräumen
+- Fenster- und Türpflege
+- Lift- und Handlaufreinigung
+- Kleinreparaturen wie Glühbirnenwechsel
 
-Wohnungsreinigung 
-
- 
-
-Auch in privaten Wohnungen führen wir mit hoher Qualität sämtliche Reinigungstätigkeiten durch, damit sie Zeit haben mit anderen Dingen des Lebens zu beschäftigen.
-
-Aufgrund unserer hohen Anzahl an Wohnungsaufträgen in Wien und vorallem in Hietzing, weiß die Maja-Hausbetreuung genau, wie man stark anhaftenden Schmutz beseitigt. `
+Auch private Wohnungsreinigung führen wir sorgfältig und effizient durch – damit Sie mehr Zeit für die wichtigen Dinge im Leben haben.`
   },
   {
     dataTitle: "Winterdienst",
     dataImagePath: "assets/winterdienst.jpg",
-    dataText: `Der Winter ist die härteste und leider auch die gefährlichste Jahreszeit und die Zahlen sprechen für sich. Jedes Jahr passieren unzählige Unfälle in dieser Saison, aufgrund von schlecht behandelten Geh-, Zugangswegen und Garageneinfahrten und Wien bleibt davon nicht verschont. Deshalb sind wir hier, um im Winter sämtliche Wege, Zugänge und Einfahrten Ihrer Liegenschaft ordnungsgemäß und zeitlich in der Früh zu behandeln, damit diese von den Einwohnern bedenkenlos verwendet werden können.
+    dataText: `Im Winter sorgen wir für sichere Wege und Einfahrten. Schnee und Eis stellen ein hohes Risiko dar – wir kümmern uns zuverlässig und rechtzeitig um die nötigen Maßnahmen.
 
-Die Maja Hausbertreuung ist für sie den ganzen Winter (vom 1 November bis 15 April) rund um die Uhr in Bereitschaft, damit sie einen sorgenfreien und verletzungsfreien Gehweg haben. Deshalb ist der Winterdienst auch ein wichtiger Bestandteil unserer Dienstleistungen, da es mit großer Verantwort verbunden ist. 
+Unser Winterdienst ist von November bis April rund um die Uhr im Einsatz.
 
-Natürlich nehmen wir auch gerne einmalige Aufträge an!
- 
-Unsere Zielgruppen sind vor allem Hausverwaltungen, Firmen und Privatpersonen
- 
- 
-Unser Winterdienst setzt sich zusammen aus:
- 
+Leistungen:
 
-    Schneeräumung
-    Splittstreuung/Auftaumittelstreuung
-    Tauwetterkontrolle
-    Splittkehrung am Saisonende.`
+- Schneeräumung
+- Streudienst
+- Tauwetterkontrolle
+- Reinigung am Saisonende
+
+Für Hausverwaltungen, Firmen und Privatkunden – auch einmalige Einsätze sind möglich.`
   },
 
 ] 
@@ -93,6 +84,10 @@ Unser Winterdienst setzt sich zusammen aus:
         <div class="sticky-frame">
           <img class="img active" id="img1" src="assets/gartendienst.jpg" alt="">
           <img class="img" id="img2" src="" alt="">
+
+          <div class="image-caption" id="image-caption">
+            Gartendienst
+          </div>
         </div>
       </div>
 
@@ -128,10 +123,14 @@ Unser Winterdienst setzt sich zusammen aus:
     let current = img1;
     let next = img2;
 
-    const switchImage = (src) => {
+    const caption = document.getElementById("image-caption");
+
+    const switchImage = (src, title) => {
       if (current.src.includes(src)) return;
 
       next.src = src;
+      
+      caption.textContent = title;
 
       next.classList.add("active");
       current.classList.remove("active");
@@ -145,7 +144,8 @@ Unser Winterdienst setzt sich zusammen aus:
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const newImage = entry.target.dataset.image;
-            switchImage(newImage);
+            const newTitle = entry.target.querySelector("h3").textContent;
+            switchImage(newImage, newTitle);
 
             items.forEach(i => i.classList.remove("active"));
             entry.target.classList.add("active");

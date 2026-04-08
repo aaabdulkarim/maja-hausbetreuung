@@ -4,7 +4,7 @@ const { title, imagePath, text = "" } = Astro.props;
 // Text in Absätze splitten
 const paragraphs = text.split("\n").filter(p => p.trim() !== "");
 ---
-<div class="service-item" data-image={imagePath}>
+<div class="service-item" data-caption={title} data-image={imagePath}>
   <h3>{title}</h3>
 
   <div class="service-content">
