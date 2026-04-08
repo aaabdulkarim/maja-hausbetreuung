@@ -1,0 +1,16 @@
+
+
+.trust ul {
+  list-style: none;
+  padding: 0;
+}
+
+.trust li {
+  margin: 0.5rem 0;
+}
+
+.cta {
+  background: #555;
+  color: white;
+  text-align: center;
+}

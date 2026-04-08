@@ -1,0 +1,79 @@
+
+/* Hintergrundbild + Overlay */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+    url("/assets/hero.jpg") center/cover no-repeat;
+
+  z-index: 0;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+/* Headline */
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 span {
+  color: #A5D6A7; /* helleres Grün */
+}
+
+/* Text */
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+/* Button Upgrade */
+.hero .btn {
+  background: #2E7D32;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #256628;
+  transform: translateY(-2px);
+}
+
+.hero-content {
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255,255,255,0.1),
+    transparent 40%
+  );
+
+  z-index: 0;
+}
+

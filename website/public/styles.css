@@ -16,16 +16,14 @@ body {
   border-bottom: 1px solid #eee;
 }
 
+
 .hero {
-  background: #2E7D32;
+  position: relative;
   color: white;
-  text-align: center;
-  padding: 5rem 2rem;
+  padding: 8rem 2rem;
+  overflow: hidden;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-}
 
 .btn {
   background: white;
@@ -42,27 +40,7 @@ body {
   gap: 1.5rem;
 }
 
-.card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid #eee;
-}
 
-.trust ul {
-  list-style: none;
-  padding: 0;
-}
-
-.trust li {
-  margin: 0.5rem 0;
-}
-
-.cta {
-  background: #555;
-  color: white;
-  text-align: center;
-}
 
 .footer {
   text-align: center;
