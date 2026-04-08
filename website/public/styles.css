@@ -97,24 +97,24 @@ body {
 .services-visual {
   position: relative;
 }
-
 .sticky-frame {
   position: sticky;
   top: 100px;
+  height: 400px;
 }
 
-.sticky-frame img {
+.sticky-frame .img {
+  position: absolute;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
   border: 1px solid #eee;
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-/* Optional: Active Zustand */
-.service-item.active {
-  border-color: #2E7D32;
-}
-
-/* Optional (richtig nice UX) */
-.sticky-frame img {
-  transition: opacity 0.3s ease;
+.sticky-frame .img.active {
+  opacity: 1;
 }

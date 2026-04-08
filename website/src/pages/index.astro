@@ -19,27 +19,35 @@ import Layout from "../layouts/Layout.astro";
 
     <!-- LINKE SEITE -->
     <div class="services-content">
-      <div class="service-item" data-image="assets/gartendienst.jpg">
-        <h3>Hausbetreuung</h3>
-        <p>Regelmäßige Kontrollen und Pflege Ihrer Immobilie.</p>
-      </div>
+      <ContentBox 
+        title="Gartendienst"
+        imagePath="assets/gartendienst.jpg"
+        text="aiushdoiuasd">
+      </ContentBox> 
 
-      <div class="service-item" data-image="assets/hausbetreuung-in-wien.jpg">
-        <h3>Gartenpflege</h3>
-        <p>Rasenmähen, Heckenschnitt und saisonale Pflege.</p>
-      </div>
+      
+      <ContentBox 
+        title="Hausbetreuung"
+        imagePath="assets/hausbetreuung-in-wien.jpg"
+        text="aiushdoiuasd">
+      </ContentBox> 
 
-      <div class="service-item" data-image="assets/winterdienst.jpg">
-        <h3>Winterdienst</h3>
-        <p>Schneeräumung und Streudienst für Ihre Sicherheit.</p>
-      </div>
+      <ContentBox 
+        title="Winterdienst"
+        imagePath="assets/winterdienst.jpg"
+        text="aiushdoiuasd">
+      </ContentBox> 
+
+     
+
 
     </div>
 
     <!-- RECHTE SEITE -->
     <div class="services-visual">
       <div class="sticky-frame">
-        <img id="service-image" src="/images/haus.jpg" alt="">
+        <img class="img active" id="img1" src="assets/gartendienst.jpg" alt="">
+        <img class="img" id="img2" src="" alt="">
       </div>
     </div>
 
@@ -66,25 +74,40 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <script type="module">
+  <script>
     const items = document.querySelectorAll(".service-item");
-    const image = document.getElementById("service-image");
+
+    const img1 = document.getElementById("img1");
+    const img2 = document.getElementById("img2");
+
+    let current = img1;
+    let next = img2;
+
+    const switchImage = (src) => {
+      if (current.src.includes(src)) return;
+
+      next.src = src;
+
+      next.classList.add("active");
+      current.classList.remove("active");
+
+      // swap references
+      [current, next] = [next, current];
+    };
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const newImage = entry.target.dataset.image;
-            image.src = newImage; 
+            switchImage(newImage);
 
             items.forEach(i => i.classList.remove("active"));
             entry.target.classList.add("active");
           }
         });
       },
-      {
-        threshold: 0.5
-      }
+      { threshold: 0.5 }
     );
 
     items.forEach((item) => observer.observe(item));
