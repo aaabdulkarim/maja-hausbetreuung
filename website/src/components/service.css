@@ -1,8 +1,76 @@
 
+
+
 .service-item {
-  background: blue;
+  background: white;
   padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid red;
-  min-height: 60vh; 
+  border-radius: 10px;
+  border: 0px solid #eee;
+  min-height: 60vh;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effekt */
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-color: #2E7D32;
+}
+
+/* Aktiver (beim Scroll) */
+.service-item.active {
+  border-color: #2E7D32;
+  box-shadow: 0 10px 25px rgba(46,125,50,0.15);
+}
+
+.service-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #2E7D32;
+}
+
+.service-content p {
+  font-family: "Space Mono", monospace;
+  font-style: normal;
+
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Special Highlight Effect */
+
+.service-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 7px;
+  background: #2E7D32;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-item {
+  position: relative;
+}
+
+.service-item:hover::before,
+.service-item.active::before {
+  opacity: 1;
+}
+
+
+/* Text Animation */
+
+.service-item {
+  opacity: 0.6;
+}
+
+.service-item.active {
+  opacity: 1;
+  transform: translateY(0);
 }

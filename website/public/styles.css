@@ -85,14 +85,6 @@ body {
   gap: 4rem;
 }
 
-.service-item {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid #eee;
-  min-height: 60vh; 
-}
-
 /* Rechts (Sticky) */
 .services-visual {
   position: relative;
