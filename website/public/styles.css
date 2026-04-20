@@ -126,3 +126,18 @@ body {
 
   z-index: 2;
 }
+
+
+.nodec{
+  text-decoration: none;
+}
+
+
+.nodec:hover{
+  transition: scale 0.2s ease;
+  scale: 103%;
+}
+
+.nodec:hover > h3 {
+  text-decoration: underline;
+}

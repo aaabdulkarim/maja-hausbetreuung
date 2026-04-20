@@ -1,13 +1,17 @@
 ---
-const { title, imagePath, text = "" } = Astro.props;
+const { title, imagePath, text, slug= "" } = Astro.props;
 
 // Text in Absätze splitten
 const paragraphs = text.split("\n").filter(p => p.trim() !== "");
 ---
-<div class="service-item" data-caption={title} data-image={imagePath}>
-  <h3>{title}</h3>
 
-  <div class="service-content">
-    {paragraphs.map(p => <p>{p}</p>)}
+<a href={`/${slug}`} class="nodec">
+
+  <div class="service-item" data-caption={title} data-image={imagePath}>
+      <h3>{title}</h3>
+    <div class="service-content">
+      {paragraphs.map(p => <p>{p}</p>)}
+    </div>
   </div>
-</div>
+
+</a>

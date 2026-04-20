@@ -6,6 +6,7 @@ import Layout from "../layouts/Layout.astro";
 
 const contentData = [
    {
+    slug: "hausbetreuung",
     dataTitle: "Hausbetreuung",
     dataImagePath: "assets/hausbetreuung-in-wien.jpg",
     dataText: `Wir übernehmen die komplette Betreuung Ihrer Wohnanlage – zuverlässig, gründlich und professionell. Als Meisterbetrieb ersetzen wir die klassische Hausmeisterarbeit und sorgen dafür, dass alles einwandfrei funktioniert.
@@ -21,6 +22,7 @@ Unsere Leistungen umfassen unter anderem:
 Auch private Wohnungsreinigung führen wir sorgfältig und effizient durch – damit Sie mehr Zeit für die wichtigen Dinge im Leben haben.`
   },
   {
+    slug: "gartendienst",
     dataTitle: "Gartendienst",
     dataImagePath: "assets/gartendienst.jpg",
     dataText: `Ein gepflegter Garten sorgt für einen positiven Gesamteindruck Ihrer Liegenschaft. Mit Erfahrung und Sorgfalt kümmern wir uns um die regelmäßige Pflege Ihrer Grünanlagen.
@@ -38,6 +40,7 @@ Auch einmalige Aufträge übernehmen wir gerne.
   },
  
   {
+    slug: "winterdienst",
     dataTitle: "Winterdienst",
     dataImagePath: "assets/winterdienst.jpg",
     dataText: `Im Winter sorgen wir für sichere Wege und Einfahrten. Schnee und Eis stellen ein hohes Risiko dar – wir kümmern uns zuverlässig und rechtzeitig um die nötigen Maßnahmen.
@@ -71,10 +74,12 @@ Für Hausverwaltungen, Firmen und Privatkunden – auch einmalige Einsätze sind
       <div class="services-content">
         {contentData.map((item) => (
           <ContentBox 
-          title={item.dataTitle}
-          imagePath={item.dataImagePath}
-          text={item.dataText}>
-        </ContentBox> 
+            title={item.dataTitle}
+            imagePath={item.dataImagePath}
+            text={item.dataText}
+            slug={item.slug}>
+          </ContentBox> 
+
         ))}
         
       </div>

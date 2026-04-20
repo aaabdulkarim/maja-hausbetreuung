@@ -1,0 +1,52 @@
+---
+const {
+  title,
+  subtitle,
+  image,
+  imageAlt = "",
+} = Astro.props;
+---
+
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/servicemain.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+
+    <section class="service-hero">
+      <div class="service-hero-bg"></div>
+
+      <div class="container service-hero-content">
+        <h1>{title}</h1>
+        <p>{subtitle}</p>
+      </div>
+    </section>
+
+    <section class="service-content-section">
+      <div class="container service-content-layout">
+
+        <div class="service-text">
+          <slot />
+        </div>
+
+        <div class="service-image">
+          <img src={image} alt={imageAlt} />
+        </div>
+
+      </div>
+    </section>
+
+    <section class="service-cta">
+      <div class="container">
+        <h2>Interesse an {title}?</h2>
+        <p>Kontaktieren Sie uns für ein unverbindliches Angebot.</p>
+        <a href="/#kontakt" class="btn">Jetzt anfragen</a>
+      </div>
+    </section>
+
+  </body>
+</html>
