@@ -1,8 +1,6 @@
 import { defineConfig } from 'astro/config';
-import staticAdapter from '@astrojs/static';
 
 export default defineConfig({
-  adapter: staticAdapter(),
   site: 'https://aaabdulkarim.github.io',
-  base: '/maja-hausbetreuung/',
+  base: '/maja-hausbetreuung',
 });
