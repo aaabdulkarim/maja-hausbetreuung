@@ -1,5 +1,5 @@
 
-/* Hintergrundbild + Overlay */
+
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -10,14 +10,12 @@
   z-index: 0;
 }
 
-/* Content */
 .hero-content {
   position: relative;
   z-index: 1;
   max-width: 700px;
 }
 
-/* Headline */
 .hero h1 {
   font-size: 3rem;
   line-height: 1.2;
@@ -25,10 +23,10 @@
 }
 
 .hero h1 span {
-  color: #A5D6A7; /* helleres Grün */
+  color: #A5D6A7; 
 }
 
-/* Text */
+
 .hero p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -36,7 +34,7 @@
   color: #ddd;
 }
 
-/* Button Upgrade */
+
 .hero .btn {
   background: #2E7D32;
   color: white;
