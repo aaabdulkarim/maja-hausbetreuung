@@ -1,7 +1,6 @@
 ---
 
 ---
-
 <header class="header">
   <div class="container header-inner">
 
@@ -10,23 +9,46 @@
       <span>Hausbetreuung Maja</span>
     </div>
 
-    <nav class="nav">
-      <a href="#leistungen">Leistungen</a>
-      <a href="#warum">Warum wir?</a>
-      <a href="#kontakt" class="nav-cta">Kontakt</a>
+    <!-- Hamburger Button -->
+    <button class="menu-toggle" id="menu-toggle">
+      ☰
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="/maja-hausbetreuung#leistungen">Leistungen</a>
+      <a href="/maja-hausbetreuung#warum">Warum wir?</a>
+      <a href="/maja-hausbetreuung#kontakt" class="nav-cta">Kontakt</a>
     </nav>
 
   </div>
-  
+
   <script>
     const header = document.querySelector(".header");
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
 
+    // Scroll Effekt
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
+      header.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Menü Toggle
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+
+    
+  </script>
+
+
+  <!-- Wegklappen nach Klick -->
+  <script>
+    const links = nav.querySelectorAll("a");
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+      });
     });
   </script>
 </header>

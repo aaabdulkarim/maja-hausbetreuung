@@ -87,3 +87,69 @@
   padding: 0.5rem 0;
   background: rgba(255,255,255,0.95);
 }
+
+/* Mobil ansicht */
+
+/* Hamburger Button */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    background: white;
+    border-bottom: 1px solid #eee;
+
+    flex-direction: column;
+    gap: 0;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.3s ease;
+  }
+
+  .nav.open {
+    max-height: 300px;
+  }
+
+  .nav a {
+    padding: 1rem 2rem;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-cta {
+    margin: 1rem;
+    text-align: center;
+  }
+
+
+  .nav {
+    transition: 
+      max-height 0.3s ease,
+      opacity 0.2s ease;
+  }
+
+  .nav:not(.open) {
+    opacity: 0;
+  }
+
+  .nav.open {
+    opacity: 1;
+  }
+}
