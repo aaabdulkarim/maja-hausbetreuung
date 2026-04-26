@@ -7,6 +7,9 @@
   backdrop-filter: blur(10px);
 
   border-bottom: 1px solid rgba(0,0,0,0.05);
+
+  transition: all 0.3s ease;
+
 }
 
 /* Layout */
@@ -26,9 +29,10 @@
   font-size: 1.1rem;
 }
 
+
 .logo img {
-  height: 32px;
-  width: auto;
+  height: 86px;
+  transition: height 0.3s ease;
 }
 
 /* Navigation */
@@ -151,5 +155,9 @@
 
   .nav.open {
     opacity: 1;
+  }
+  
+  .logo img {
+    height: 42px;
   }
 }
