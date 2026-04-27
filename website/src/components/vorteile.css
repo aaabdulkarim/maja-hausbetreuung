@@ -22,8 +22,13 @@
 
 .icon {
     font-size: 20px;
-    color: #2E7D32; 
     margin-bottom: 5px;
+}
+
+.icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #2E7D32; 
 }
 
 .feature h3 {
