@@ -53,6 +53,10 @@ body {
   color: #aaa;
 }
 
+.footer a:link, a:visited{
+  color: #2E7D32
+}
+
 /* Layout */
 .services-layout {
   display: grid;
